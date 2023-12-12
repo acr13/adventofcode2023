@@ -58,9 +58,8 @@ const p2 = () => {
     const [left, right] = line.split(' ');
 
     DP = {};
-    let spring = [left, left, left, left, left].join('?').split('');
-    let target = right.split(',').map(Number);
-    target = [target, target, target, target, target].flat().map(Number);
+    const spring = [left, left, left, left, left].join('?').split('');
+    const target = [right, right, right, right, right].join(',').split(',').map(Number);
     sum += solveDP(spring, target, 0, 0, 0);
   }
 
